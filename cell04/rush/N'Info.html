@@ -15,6 +15,7 @@
     <!-- <div class="notch"></div> -->
     <nav>
         <ul>
+            <li><a href="Rush.html">Back</a></li>
             <li><a href="#home">Home</a></li>
             <li><a href="#me">Me</a></li>
             <li><a href="#project">Experience</a></li>
@@ -22,13 +23,15 @@
         </ul>
     </nav>
     <section class = "home" id = "home">
-        <h2>Wellcome to my world!!</h2>
+        <h2>Welcome to my world!!</h2>
     </section>
+
     <section class = "me" id="me">
         <img class = "namo" src="namo.jpg" alt="namo">
+        <div class ="box"></div>
         <div class="info">
             <h2>About me!!</h2>
-            <div class ="box"></div>
+            
             <ul>
                 <li>Name : Nachakhun Sornmanee</li>
                 <li>Nick name : Namo</li>
@@ -43,11 +46,14 @@
     </section>
     <section id = "project" class = "project">
         <div class = "headp">This is my Experience</div>
-        <img src="sci_creditbank.jpg" alt="creditbank">
-        <img class = "img1"src="sci_creditbank.jpg" alt="creditbank">
-        <img src="sci_creditbank.jpg" alt="creditbank">
-        <div class = "sub">Science Calculus Creditbank</div>
-        <div class = "sub1">Science Calculus Creditbank</div>
+        <div class = "image-grid">
+            <img src="sci_creditbank.jpg" alt="creditbank">
+            <img class = "img1"src="sci_creditbank.jpg" alt="creditbank">
+        </div>    
+        <div class = "sub-grid">
+            <div class = "sub">Science Calculus Creditbank</div>
+            <div class = "sub">Science Calculus Creditbank</div>
+        </div>    
         <div class = "box1"></div>
     </section>
     <section id = "contracts" class = "contracts">
@@ -59,19 +65,6 @@
         <div class = "buttom"></div>
 
     </section>
-    <script>
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
     
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-    
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>       
 </body>
 </html>
