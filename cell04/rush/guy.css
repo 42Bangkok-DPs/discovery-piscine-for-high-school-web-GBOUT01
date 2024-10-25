@@ -1,0 +1,211 @@
+/* Global styles */
+html {
+    font-family: monospace;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px; /* Space for fixed navbar */
+}
+
+/* ----------------------nav---------------------------- */
+nav {
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-size: 3vw; /* Default size for responsive scaling */
+}
+
+nav li {
+    margin: 0 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block;
+}
+
+nav a:hover {
+    background-color: darkgray;
+    transform: scale(1.05);
+}
+
+/* -----------------section1 about---------------------- */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns for larger screens */
+    max-width: 800px;
+    gap: 20px;
+    margin: 20px;
+    padding: 15vh 0;
+}
+
+.about-in {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: ease-in-out 0.3s;
+}
+
+.about img:hover {
+    transform: scale(1.2);
+}
+
+.about h2 {
+    text-align: center;
+    margin: 0;
+}
+
+/* GIF container fix */
+.about-gif {
+    margin-top: 20px;
+}
+
+.about-gif iframe {
+    width: 100%;
+    height: auto; /* Ensure responsiveness */
+    max-height: 400px; /* Limit maximum height */
+}
+
+/*-------------experiences----------------*/
+.experiences {
+    padding-right: 1vw;
+    padding-bottom: 18vh;
+}
+.experiences h2 {
+    text-align: center;
+    font-size: 3vw;
+}
+
+.experiences-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)); /* Flexible columns */
+    gap: 20px; /* Space between certificates */
+    max-width: 800px;
+    margin: 0 auto; /* Centering the grid */
+}
+
+.experiences-grid img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the images fit well */
+    border-radius: 8px; /* Add some rounding to the images */
+    transition: transform 0.3s ease-in-out; 
+}
+
+.experiences-grid img:hover {
+    transform: scale(2); /* Slightly increase size on hover */
+}
+
+/* ----------------------contract---------------------- */
+.Contracts {
+    display: flex;                /* Use flexbox for horizontal layout */
+    justify-content: center;      /* Center items horizontally */
+    align-items: center;          /* Center items vertically */
+    flex-wrap: wrap;              /* Allow items to wrap if necessary */
+    padding: 20px;                /* Add padding around the section */
+}
+
+.Contracts a, 
+.mail, 
+.tel {
+    display: flex;                /* Use flex for inner elements */
+    align-items: center;          /* Center items vertically */
+    margin: 10px;                /* Add horizontal margin between items */
+}
+
+.Contracts img {
+    width: 40px;                 /* Set a uniform width for the icons */
+    height: 40px;                /* Set a uniform height for the icons */
+    margin-right: 8px;           /* Space between the image and the text */
+    transition: ease-in-out 0.3s;
+}
+
+.Contracts img:hover {
+    transform: scale(1.3);
+}
+
+.Contracts p {
+    margin: 0;                   /* Remove margin from paragraphs */
+    font-size: 1em;              /* Set a uniform font size for texts */
+}
+
+
+/* ---------------- Responsive Styles ---------------- */
+
+/* For smaller screens (less than 600px) */
+@media (max-width: 600px) {
+    .about {
+        grid-template-columns: 1fr; /* Stack image and text vertically */
+        text-align: center;
+    }
+
+    .about-in {
+        font-size: 3vw; /* Adjust font size for smaller screens */
+    }
+
+    .about img {
+        max-width: 80%; /* Reduce image size on smaller screens */
+        margin: 0 auto; /* Center the image */
+    }
+
+    /* Hide the GIF on smaller screens */
+    .about-gif iframe {
+        max-width: 80%;
+    }
+
+    .experiences-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    }
+
+    .experiences h2 {
+        font-size: 5vw; /* Adjust heading size on smaller screens */
+    }
+}
+
+/* For larger screens (more than 600px) */
+@media (min-width: 601px) {
+    .about-gif {
+        display: block; /* Show GIF on larger screens */
+    }
+
+    nav ul {
+        font-size: 18px; /* Adjust font size for larger screens */
+    }
+
+    .experiences h2 {
+        font-size: 30px;
+    }
+}
