@@ -11,6 +11,8 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 60px; /* Space for fixed navbar */
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* ----------------------nav---------------------------- */
@@ -100,8 +102,9 @@ nav a:hover {
 
 /*-------------experiences----------------*/
 .experiences {
-    padding-right: 1vw;
     padding-bottom: 18vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 .experiences h2 {
     text-align: center;
@@ -154,7 +157,7 @@ nav a:hover {
 }
 
 .Contracts img:hover {
-    transform: scale(1.3);
+    transform: scale(1.5);
 }
 
 .Contracts p {
@@ -192,6 +195,18 @@ nav a:hover {
 
     .experiences h2 {
         font-size: 5vw; /* Adjust heading size on smaller screens */
+    }
+
+    .experiences-grid img {
+        transition: ease-in-out 0.3s;
+    }
+
+    .experiences-grid img:hover {
+        transform: scale(1.1);
+    }
+
+    .Contracts {
+        flex-direction: column;
     }
 }
 
